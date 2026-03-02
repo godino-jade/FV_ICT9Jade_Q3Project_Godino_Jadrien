@@ -38,6 +38,7 @@
         
         .container {
             margin-top: 50px;
+            margin-bottom: 70px;
             padding-top: 20px;
             padding-bottom: 10px;
             border-radius: 10px;
@@ -71,19 +72,13 @@
 			right: 0;
 			bottom: 0;
 			width: 100%;
-			background-color: #bab1f4aa;
+			background-color: #bab1f4ce;
 			color: #433878;
 			text-align: center;
 			font-family: Kumbh Sans;
         }
 
-        #emailver {
-            text-decoration: underline;
-            color: rgb(0, 47, 255);
-        }
-
         #book{
-        text-decoration: underline;
             color: rgb(255, 255, 255);
         }
 
@@ -92,51 +87,58 @@
             margin: auto;
             padding: 100px;
         }
+
+        label{
+            font-weight: bold ;
+        }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-        <a class="navbar-brand text-center" href="#"><img src="Q3PROJECT_LOGO_NOTEXT.png" alt="" class="logo"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+		<div class="container-fluid">
+			<a class="text-center" href="index.html"><img src="Q3PROJECT_LOGO_NOTEXT.png" alt="" class="logo"></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-    <div class="collapse navbar-collapse" id="mynavbar">
-        <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
+			<div class="collapse navbar-collapse" id="mynavbar">
+				<ul class="navbar-nav me-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Home</a>
+					</li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="page4.html">Fare Matrix</a>
-            </li>
+					<li class="nav-item">
+						<a class="nav-link" href="page4.html">Fare Matrix</a>
+					</li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="page5.html">Schedule</a>
-            </li>
+					<li class="nav-item">
+						<a class="nav-link" href="page5.html">Schedule</a>
+					</li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="page6.html">Help</a>
-            </li>
-        </ul>   
+					<li class="nav-item">
+						<a class="nav-link" href="page6.html">Help</a>
+					</li>
+				</ul>   
 
-        <div class="d-flex">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link" id="book" href="page4.html">Book Now</a>
-                 </li>
-
-            <a href="page2.html" class="btn">Create Account</a>
-        </div>
-    </div>
+				<div class="d-flex">
+					<ul class="navbar-nav me-auto">
+						<li class="nav-item">
+							<a class="nav-link" id="book" href="page4.html"><b>Book Now</b></a>
+						</li>
+					
+					<a href="page2.html" class="btn" id="create">Create Account</a>
+				</div>
+			</div>
+		</div>
     </nav>
     
     <div class="container">
         <div class="row">
             <div class="col-sm-5" id="profile">
                 <img class="rounded-circle" src ="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg">
+                
                 <br><br>
+
                 <form>
                     <input type="file" class="form-control">
                     <br>
@@ -151,10 +153,10 @@
                 <h1><b>REGISTRATION</b></h1>
 
                 <details class="ontoggle">
-  
-        <summary><u>Instructions:</u></summary>
-        <p id="instructions"></p>
-    </details>
+                    <summary><u>Instructions:</u></summary>
+                    <p id="instructions"></p>
+                </details>
+
                 <br>
 
                 <form>
@@ -198,38 +200,37 @@
                     <br>
 
                     <input type="checkbox" class="form-check-input" id="agree" name="termsconditions" value="checked">
-                    <label class="form-check-label" for="agree">I accept the <b><u style="color: rgb(78, 87, 255)
+                    <label class="form-check-label" for="agree">I accept the <b><u style="color: rgb(0, 7, 148)
                     ;">Terms of Use and Privacy Policy</u></b></label>
 
                     <br><br><br>
 
                     <div class="d-grid gap-3">
-                        <button type="button" class="btn btn-info btn-block" onclick="create()"><b>CREATE MY ACCOUNT</b></button>
+                        <a href="page3.html" class="btn btn-success btn-block"><b>CREATE ACCOUNT</b></a>
                     </div>
 
                     <br>
 
                     <div class="d-grid gap-3">
-                        <button type="button" class="btn btn-light btn-block" onclick="window.location.reload()"><b>CANCEL</b></button>
+                        <button type="button" class="btn btn-danger btn-block" onclick="window.location.reload()"><b>CANCEL</b></button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
     <script>
-        function verify(){
-            document.getElementById("emailver").innerHTML = "Verify your email"; 
+        function create(){
+            var x = document.getElementById("fname").value;
+            alert("You have successfully registered your account," + " " + x +"!"); 
           }
+
           document.getElementById('instructions').innerHTML = "Please fill out all required fields in the registration form with accurate information. Once completed, review your details and click <b>Submit</b> to finish your registration";
 
     </script>
 
     <div class="footer">
-        <p>F. Benitez, J. Godino, Y. Valerio | 9-Jade ©2026</p>
+        <b>F. Benitez, J. Godino, Y. Valerio | 9-Jade ©2026</b>
     </div>
-
-
 </body>
-
-
-
+</html>
