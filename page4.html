@@ -7,78 +7,73 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Fugaz+One&family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap" rel="stylesheet">
 
-    <style>
+<style>
+body {
+  background-image: url('https://assets.publishing.service.gov.uk/media/5a5032c740f0b648ca1dc1bb/s960_ris-midlands.jpg');
+  background-size: cover;
+}
 
-        body {
-            background-image: url('https://assets.publishing.service.gov.uk/media/5a5032c740f0b648ca1dc1bb/s960_ris-midlands.jpg');
-            background-size: cover;
-        }
+.logo { 
+  width: 95px; 
+  height: 95px; }
 
-        .logo {
-            width: 50px;
-            height: 70px;
-            margin-left: 20px;
-			margin-right: 30px;
-            }
+.nav-item { 
+  font-family: Kumbh Sans; 
+  margin: 15px; }
 
-        .nav-item {
-            font-family: Kumbh Sans;
-            margin: 15px;
-            }
+.navbar { 
+  background-color: #bab1f4; 
+  box-shadow: 0 6px 18px rgba(46, 4, 29, 0.35); }
 
-        .navbar {
-            background-color: #bab1f4;
-            box-shadow: 0 6px 18px rgba(46, 4, 29, 0.35);
-            }
+.navbar-brand { 
+  margin-left: 50px; }
 
-        .navbar-brand {
-            margin-left: 50px;
+.container {
+  margin-top: 50px; 
+  padding-top: 20px; 
+  padding-bottom: 10px; 
+  border-radius: 10px;
+  justify-content: center; 
+  background: rgba(212, 175, 255, 0.673);
+  box-shadow: 0 6px 18px rgba(177, 129, 255, 0.853); 
+  font-family: Kumbh Sans;
+}
 
-        }
+.fare-box { 
+  background-color: #9f69ec; 
+  border-radius: 15px; 
+  padding: 40px; 
+  font-weight: bold; }
 
-        .container {
-            margin-top: 50px;
-            padding-top: 20px;
-            padding-bottom: 10px;
-            border-radius: 10px;
-            justify-content: center;
-            background-color: #cea3f8;
-            background: rgba(212, 175, 255, 0.673);
-            box-shadow: 0 6px 18px rgba(177, 129, 255, 0.853);
-            font-family: Kumbh Sans;
-            transition: transform 0.6s ease;
-        }
+.btn { 
+  background-color: #a38de6; 
+  font-family: Kumbh Sans; 
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  margin: 5px; }
 
-        .container:hover {
-            transform: scale(1.0223);
-        }
+.btn:hover { 
+  background-color: #8b55ef; 
+  color: white; }
 
-        .btn {
-            background-color: #a38de6;
-            font-family: Kumbh Sans;
-            margin-right: 20px;
-            margin-left: 10px;
-        }
+.footer {
+padding-top: 15px;
+position: fixed; 
+right: 0; 
+bottom: 0; 
+width: 100%; 
+background-color: #ab94f9c2; 
+color: #433878; 
+text-align: center; 
+font-family: Kumbh Sans;
+}
 
-        #book{
-			color: rgb(255, 255, 255);
-			}
-
-        .footer {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: #bab1f4aa;
-            color: #433878;
-            text-align: center;
-            font-family: Kumbh Sans;
-            }
-
-    </style>
+</style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
+
+<nav class="navbar navbar-expand-lg">
 		<div class="container-fluid">
 			<a class="text-center" href="index.html"><img src="Q3PROJECT_LOGO_NOTEXT.png" alt="" class="logo"></a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
@@ -119,79 +114,94 @@
 <div class="container text-dark text-center">
     <p class ="fw-bold display-1">Fare Guide:</p>
 
-<form>
-
-<div class="col">
-
-      <label for="sel1" class="form-label fw-bold">Pick-Up Location:</label>
-
-      <select class="form-select" id="sel1" placeholder="Choose your Pick-Up Location" name="sellist1">
-      
-      <option>North Avenue</option>
-
-      <option>Quezon Avenue</option>
-      
-      <option>Kamuning</option>
-
-      <option>Araneta Center-Cubao</option>
-
-      <option>Santolan-Annapolis</option>
-
-      <option>Ortigas</option>
-
-      <option>Shaw Boulevard</option>
-
-      <option>Boni</option>
-      
-      <option>Guadalupe</option>
-
-      <option>Buendia</option>
-
-      <option>Ayala</option>
-
-      <option>Magallanes</option>
-
-      <option>Taft Avenue</option>
-      
-    </select>
+    <div class="col">
+      <label class="form-label fw-bold">PICK-UP LOCATION:</label>
+      <select class="form-select" id="pickup">
+        <option>Click here to choose your PICK-UP location</option>
+        <option value="0">North Avenue</option>
+        <option value="2">Quezon Avenue</option>
+        <option value="4">Kamuning</option>
+        <option value="7">Araneta Center-Cubao</option>
+        <option value="9">Santolan-Annapolis</option>
+        <option value="11">Ortigas</option>
+        <option value="13">Shaw Boulevard</option>
+        <option value="15">Boni</option>
+        <option value="17">Guadalupe</option>
+        <option value="19">Buendia</option>
+        <option value="21">Ayala</option>
+        <option value="23">Magallanes</option>
+        <option value="25">Taft Avenue</option>
+      </select>
+    </div>
+    <br>
 
     <div class="col">
-
-      <label for="sel1" class="form-label fw-bold">Drop-Off Location:</label>
-
-      <select class="form-select" id="sel2" name="sellist2">
-
-      <option>North Avenue</option>
-
-      <option>Quezon Avenue</option>
+      <label class="form-label fw-bold">DROP-OFF LOCATION:</label>
+      <select class="form-select" id="dropoff">
+        <option>Click here to choose your DROP-OFF location</option>
+        <option value="0">North Avenue</option>
+        <option value="2">Quezon Avenue</option>
+        <option value="4">Kamuning</option>
+        <option value="7">Araneta Center-Cubao</option>
+        <option value="9">Santolan-Annapolis</option>
+        <option value="11">Ortigas</option>
+        <option value="13">Shaw Boulevard</option>
+        <option value="15">Boni</option>
+        <option value="17">Guadalupe</option>
+        <option value="19">Buendia</option>
+        <option value="21">Ayala</option>
+        <option value="23">Magallanes</option>
+        <option value="25">Taft Avenue</option>
       
-      <option>Kamuning</option>
-
-      <option>Araneta Center-Cubao</option>
-
-      <option>Santolan-Annapolis</option>
-
-      <option>Ortigas</option>
-
-      <option>Shaw Boulevard</option>
-
-      <option>Boni</option>
-      
-      <option>Guadalupe</option>
-
-      <option>Buendia</option>
-
-      <option>Ayala</option>
-
-      <option>Magallanes</option>
-
-      <option>Taft Avenue</option>
-
-    </select>
-
+      </select>
     </div>
-  </div>
-</form>
+
+    <br>
+    <div class="col">
+        <div class="fare-box">
+          <h3>Fare:</h3>
+          <h1 id="DisplayAns">₱ 0.00</h1>  
+        </div>
+    </div>
+
+    <div class="row mb-3 mt-3">
+        <div class="col">
+            <button type="button" class="btn" onclick="calculateFare(false)">REGULAR FARE</button>
+            <button type="button" class="btn" onclick="calculateFare(true)">DISCOUNTED FARE</button>
+            <button type="button" class="btn" onclick="window.location.reload()">Refresh</button>
+        </div>
+    </div>
 </div>
+
+<script>
+    function calculateFare(isDiscounted) {
+      let pickup = parseFloat(document.getElementById("pickup").value); //to convert stings to numbers
+      let dropoff = parseFloat(document.getElementById("dropoff").value);
+      
+      let basefare = 50; //minimum fare that includes first 2KM
+      let perKMrate = 15; //cost per kilometer beyond 2KM
+      let baseKM = 2; //distance included in the base fare
+
+      let distance = Math.max(Math.abs(dropoff - pickup), 0); //selects first value
+      let extraKM = Math.max(distance - baseKM, 0); //will calculate KM when it exceeds the base fare
+
+      //fare calculate
+      let fare = basefare + (extraKM * perKMrate); //regular rate
+
+      //with discount
+      if (isDiscounted) {
+        fare = fare * 0.8; 
+      }
+
+     //display
+      document.getElementById("DisplayAns").innerHTML = "₱ " + fare.toFixed(2);
+    }
+
+</script>
+
+<div class="footer">
+    <p>F. Benitez, J. Godino, Y. Valerio | 9-Jade ©2026</p>
+</div>
+      
 </body>
 </html>
