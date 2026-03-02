@@ -57,7 +57,7 @@ body {
   align-items: center;
   justify-content: center;   }
 
-.btn:hover { 
+#fare:hover { 
   background-color: #8b55ef; 
   color: white; }
 
@@ -173,9 +173,9 @@ color: rgb(255, 255, 255); }
 
     <div class="row mb-3 mt-3">
         <div class="col">
-            <button type="button" class="btn" onclick="calculateFare(false)">REGULAR FARE</button>
-            <button type="button" class="btn" onclick="calculateFare(true)">DISCOUNTED FARE</button>
-            <button type="button" class="btn" onclick="window.location.reload()">Refresh</button>
+            <button type="button" class="btn" id="fares" onclick="calculateFare(false)">REGULAR FARE</button>
+            <button type="button" class="btn" id="fares" onclick="calculateFare(true)">DISCOUNTED FARE</button>
+            <button type="button" class="btn" id="fares" onclick="window.location.reload()">Refresh</button>
         </div>
     </div>
 </div>
